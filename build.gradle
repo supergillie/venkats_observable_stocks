@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.slf4j:slf4j-log4j12:2.0.0-alpha7'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
+
+    implementation 'com.yahoofinance-api:YahooFinanceAPI:3.17.0'
+    testRuntimeOnly 'com.yahoofinance-api:YahooFinanceAPI:3.17.0'
+    testImplementation 'com.yahoofinance-api:YahooFinanceAPI:3.17.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
